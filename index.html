@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Johnson Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gabriel Johnson</h1>
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle">Switch Theme</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+   <!-- About Me Section -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+        <p>Hi there! I'm Gabriel Johnson, a dedicated software engineer with a passion for developing creative technology solutions. I specialize in front-end development and have a strong appreciation for design, aiming to create applications that are both functional and visually appealing. I thrive on teamwork and enjoy tackling challenging problems, always eager to expand my knowledge and adapt to the dynamic world of technology.</p>
+        <img src="your-image.jpg" alt="Your Image" class="profile-image">
+    </div>
+</section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <span>HTML</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>CSS</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>React</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="gabbytraveltips.png" alt="Project One" class="project-image">
+            <div class="project-info">
+                <h3>Gabby Travel Tips</h3>
+                <p>Gabby Travel Tips is your go-to resource for all things related to studying, visiting, and immigrating abroad. Designed to simplify complex travel processes, this website provides clear, actionable tips, FAQs, and personalized consultation options for prospective international students and visitors.</p>
+                <a href="https://gabbytraveltips.netlify.app/" target="_blank" class="project-link">Check Project</a>
+            </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="hero cake.jpg" alt="Project Two" class="project-image">
+            <div class="project-info">
+                <h3>Ojamcy Cakes</h3>
+                <p>Ojamcy Cakes specializes in creating delicious and unique cakes for every occasion. Whether it's a birthday, wedding, or corporate event, we provide custom cakes that are both beautiful and tasty.</p>
+                <a href="https://ojamcycakes.netlify.app/" target="_blank" class="project-link">Check Project</a>
+            </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img src="study-tracker.jpg" alt="Project Three" class="project-image">
+            <div class="project-info">
+                <h3>Study Tracker</h3>
+                <p>Study Tracker helps students keep track of their assignments, deadlines, and study hours. Designed to improve time management, this tool aims to increase productivity and keep students on top of their academic work.</p>
+                <a href="https://codewithgabby.github.io/STUDY-GROUP-TRACKER/" target="_blank" class="project-link">Check Project</a>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:johnfem4real@gmail.com" target="_blank">johnfem4real@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/johnson-gabriel-b716aa212/" target="_blank">Johnson Gabriel</a></p>
+        <p>TikTok: <a href="https://www.tiktok.com/@codewithgabby" target="_blank">CODE WITH GABBY</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gabriel Johnson. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Theme Toggle -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            themeToggle.textContent = document.body.classList.contains('dark') ? 'Light Theme' : 'Dark Theme';
+        });
+    </script>
+</body>
+</html>

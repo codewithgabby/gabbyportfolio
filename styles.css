@@ -1,0 +1,254 @@
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Variables for themes */
+:root {
+  --background-color: #f0f2f5; /* Light theme background */
+  --text-color: #333;         /* Light theme text */
+  --primary-color: #4e54c8;   /* Shared primary color */
+  --secondary-color: darkblue;
+  --card-background: #fff;
+}
+
+body.dark {
+  --background-color: #1e1e1e; /* Dark theme background */
+  --text-color: #ddd;          /* Dark theme text */
+  --card-background: #2e2e2e;
+}
+
+/* Header styling */
+header {
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: var(--primary-color);
+  margin-inline: 10px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Other sections (shared styles) */
+.about, .skills, .projects, .contact {
+  background: var(--card-background);
+  color: var(--text-color);
+  padding: 40px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Skills Section Styling */
+.skills {
+  background: var(--card-background);
+  color: var(--text-color);
+  padding: 40px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill span {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* About Me Section Image */
+.profile-image {
+  width: 150px; /* Set a fixed width for the profile image */
+  height: auto;
+  border-radius: 50%; /* Makes the image circular */
+  margin-top: 20px;
+  transition: width 0.3s ease; /* Optional smooth resize transition */
+}
+
+
+/* Optional: Adjust responsiveness for mobile */
+@media (max-width: 768px) {
+  .profile-image {
+      width: 120px; /* Smaller profile image on mobile */
+  }
+}
+
+/* Projects Section */
+.projects {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Fixed width for the project cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensure the image fills the container */
+  border-bottom: 2px solid #ddd; /* Divider between image and text */
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-container {
+      flex-direction: column; /* Stack projects vertically on smaller screens */
+      align-items: center;
+  }
+
+  .project-card {
+      width: 100%; /* Full width on smaller screens */
+  }
+}
+
+
+/* Progress bar container */
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 20px;
+}
+
+/* Progress bar styling */
+.progress {
+  height: 100%;
+  background-color: #4e54c8; /* Primary color for progress */
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  border-radius: 25px;
+  transition: width 0.5s ease;
+}
+
+/* Optional: Change progress color for dark theme */
+[data-theme="dark"] .progress {
+  background-color: #4e54c8; /* Darker color or another theme color */
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Back-to-Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s;
+}
+
+#backToTop:hover {
+  background: var(--secondary-color);
+}
