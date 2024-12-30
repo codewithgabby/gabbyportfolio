@@ -186,6 +186,23 @@ nav a:hover {
       align-items: center;
   }
 
+  /* Responsive adjustments for navigation on mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack the nav items vertically */
+    align-items: center; /* Center the nav items */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Space out the list items on mobile */
+  }
+
+  nav a {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 12px 20px; /* Adjust the padding for better spacing */
+  }
+}
+
   .project-card {
       width: 100%; /* Full width on smaller screens */
   }
